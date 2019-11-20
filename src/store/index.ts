@@ -2,8 +2,7 @@ import { createStore, combineReducers, compose, applyMiddleware, Store } from 'r
 import thunk from 'redux-thunk';
 import { reducer as root, IRootState } from './root';
 
-// Enable redux dev tool
-const middleware = compose(applyMiddleware(thunk), (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__());
+const middleware = compose(applyMiddleware(thunk));
 
 export interface IAppState {
   root: IRootState;
